@@ -1,0 +1,17 @@
+{
+  "name": "weibo-wecode-bridge",
+  "version": "1.0.0",
+  "description": "Bridge Weibo DM to WeCode CLI via cc-connect",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ws": "^8.16.0"
+  },
+  "keywords": ["weibo", "wecode", "cc-connect", "bridge"],
+  "license": "MIT"
+}

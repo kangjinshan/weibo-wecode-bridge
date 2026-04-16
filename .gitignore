@@ -1,0 +1,41 @@
+# 编译产物
+cc-connect-main/cc-connect
+cc-connect-main/cc-connect-darwin
+cc-connect-main/cc-connect-linux-amd64
+deploy/bin/
+
+# 依赖目录
+node_modules/
+cc-connect-main/vendor/
+
+# IDE 和编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+._*
+
+# 日志文件
+*.log
+logs/
+
+# 环境变量（敏感信息）
+.env
+*.env.local
+
+# 会话数据
+sessions/
+
+# 构建缓存
+*.tar.gz
+
+# Node.js
+src/node_modules/
+
+# Go
+__pycache__/
+*.pyc

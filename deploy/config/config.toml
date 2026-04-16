@@ -1,0 +1,34 @@
+# cc-connect 配置文件
+language = "zh"
+data_dir = "/home/ubuntu/.cc-connect"
+
+[log]
+level = "info"
+
+[[projects]]
+name = "AI"
+
+[projects.agent]
+type = "claudecode"
+
+[projects.agent.options]
+work_dir = "/home/ubuntu/workspace"
+mode = "default"
+provider = "wecode"
+
+[[projects.agent.providers]]
+name = "wecode"
+api_key = "sk-wecode-proxy-claude-code-sk"
+base_url = "http://127.0.0.1:3456"
+
+# 微博平台配置
+[[projects.platforms]]
+type = "weibo"
+
+[projects.platforms.options]
+app_id = "5288388166418433"
+app_secret = "0e2925708f3d09d9f59397737c75432d6683f72edf0d93bf398937254e713a01"
+token_url = "http://open-im.api.weibo.com/open/auth/ws_token"
+ws_url = "ws://open-im.api.weibo.com/ws/stream"
+allow_from = "*"
+account_id = "default"

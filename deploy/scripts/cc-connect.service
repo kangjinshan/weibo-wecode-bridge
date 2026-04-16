@@ -1,0 +1,36 @@
+[Unit]
+Description=Weibo-WeCode Bridge Service (cc-connect)
+Documentation=https://github.com/chenhg5/cc-connect
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/weibo-wecode-bridge
+
+# 加载环境变量
+EnvironmentFile=/home/ubuntu/weibo-wecode-bridge/.env
+
+# Claude API 环境变量
+Environment="ANTHROPIC_API_KEY=${CLAUDE_API_KEY}"
+Environment="ANTHROPIC_BASE_URL=${CLAUDE_BASE_URL}"
+
+# 启动命令
+ExecStart=/home/ubuntu/weibo-wecode-bridge/bin/cc-connect
+
+# 重启策略
+Restart=always
+RestartSec=10
+
+# 日志
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cc-connect
+
+# 资源限制
+LimitNOFILE=65535
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
