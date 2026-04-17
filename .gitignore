@@ -1,8 +1,8 @@
-# 编译产物
+# 编译产物（源码目录的编译产物仍然忽略）
 cc-connect-main/cc-connect
 cc-connect-main/cc-connect-darwin
 cc-connect-main/cc-connect-linux-amd64
-deploy/bin/
+# deploy/bin/ 需要上传编译好的二进制文件给用户使用
 
 # 依赖目录
 node_modules/
